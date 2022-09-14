@@ -201,6 +201,12 @@ img {
   color: green;
 }
 
+/* hero section */
+.hero {
+  min-height: 80vh;
+  background: url("./banner1.jpg") center/cover fixed;
+}
+
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
