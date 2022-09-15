@@ -431,11 +431,6 @@ a {
   display: grid;
   place-items: center;
   min-height: 40vh;
-  display: none;
-}
-
-.show-loading {
-  display: block;
 }
 
 .loading h1 {
@@ -460,22 +455,27 @@ a {
 
 .product-image {
   max-width: 100%;
+  width: 100%;
   height: 15rem;
   object-fit: cover;
 }
 
-.featured-container {
+.featured-container,
+.products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: center;
-  max-width: 300px;
+  max-width: 90%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
 }
 
 .product {
+  border: 1px solid rgba(10, 10, 10, 0.192);
+  box-shadow: 2px 4px 6px #3a3a3a;
   border-radius: 0.5rem;
-  box-shadow: 2px 4px 6px solid #000;
 }
 
 .product-container {
@@ -484,17 +484,28 @@ a {
 
 .product-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--transition-8);
+}
+
+.product-container:hover .product-icons {
+  opacity: 1;
 }
 
 .btn-shopping,
 .btn-search {
   background-color: transparent;
-  color: black;
+  color: orange;
   box-shadow: none;
   border: none;
   margin: 0;
@@ -504,7 +515,7 @@ a {
 .btn-shopping:hover,
 .btn-search:hover {
   background-color: transparent;
-  color: orange;
+  color: rgb(0, 0, 0);
   transform: none;
 }
 

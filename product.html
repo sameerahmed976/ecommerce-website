@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-
-    <script src="about.js" defer type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -14,7 +11,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>MyShop / About</title>
+    <script type="module" src="product.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Myshop</title>
   </head>
   <body>
     <header class="header">
@@ -85,17 +84,36 @@
         </aside>
       </section>
     </header>
-    <main class="about-main">
-      <h1 class="about-heading">Home / About</h1>
-      <h2 class="about-title">Our History</h2>
-      <p class="about-paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac odio
-        tortor. Etiam quis venenatis quam. Vestibulum consectetur gravida ante
-        vitae eleifend. Sed in nisl turpis. Sed eget posuere nisi, sit amet
-        aliquam dolor. Nunc id lacinia lorem. Vivamus vitae consequat nibh.
-        Donec dui tellus, molestie eu tellus a, placerat facilisis turpis. Proin
-        ac convallis urna. Praesent et massa dolor. Proin eget tempus diam.
-      </p>
+    <main class="main">
+      <section class="search">
+        <form class="form">
+          <input type="text" class="form-search" placeholder="search" />
+        </form>
+        <h1 class="heading">Company</h1>
+        <section class="btn-group"></section>
+        <form class="form-range">
+          <input type="range" class="range" min="0" max="100" value="50" />
+        </form>
+        <p class="range-value">23</p>
+      </section>
+      <section class="products">
+        <h2 class="loading">Loading...</h2>
+        <!-- <article class="product">
+            <article class="product-container">
+              <img src="./banner1.jpg" alt="product" class="product-image" />
+              <article class="product-icons">
+                <a href="products.html?id=1" class="btn btn-search"
+                  ><i class="fa-solid fa-search"></i
+                ></a>
+                <button class="btn btn-shopping">
+                  <i class="fa-solid fa-shopping-cart"></i>
+                </button>
+              </article>
+            </article>
+            <h3 class="product-name">Name</h3>
+            <h4 class="product-price">price</h4>
+          </article> -->
+      </section>
     </main>
   </body>
 </html>

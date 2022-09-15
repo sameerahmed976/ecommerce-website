@@ -12,3 +12,7 @@ cartClose.addEventListener("click", () => {
   //   console.log("click");
   cartOverlay.classList.remove("show-cart-overlay");
 });
+
+export const openCart = () => {
+  cartOverlay.classList.add("show-cart-overlay");
+};
