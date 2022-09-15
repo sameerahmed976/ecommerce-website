@@ -1,25 +1,14 @@
-import { getElement } from "./src/getElement.js";
+import "./src/cartToggle.js";
+import { displayProducts } from "./src/displayProducts.js";
+import { getFetch } from "./src/getFetch.js";
+import "./src/sidebar.js";
 
-const hamburger = getElement(".hamburger");
-const closeButton = getElement(".close");
-const sideNavbar = getElement(".side-navbar");
-const cartContainer = getElement(".cart");
-const cartOverlay = getElement(".cart-overlay ");
-const cartClose = getElement(".cart-close ");
+const url = "https://course-api.com/javascript-store-products";
 
-hamburger.addEventListener("click", () => {
-  //   console.log("click");
-  sideNavbar.classList.add("show-side-bar");
-});
-closeButton.addEventListener("click", () => {
-  //   console.log("click");
-  sideNavbar.classList.remove("show-side-bar");
-});
-cartContainer.addEventListener("click", () => {
-  //   console.log("click");
-  cartOverlay.classList.add("show-cart-overlay");
-});
-cartClose.addEventListener("click", () => {
-  //   console.log("click");
-  cartOverlay.classList.remove("show-cart-overlay");
-});
+const init = async () => {
+  const data = await getFetch(url);
+  //   console.log(data);
+  displayProducts(data);
+};
+
+window.addEventListener("DOMContentLoaded", init);
