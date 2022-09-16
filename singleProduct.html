@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -11,9 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" src="product.js" defer></script>
+
     <link rel="stylesheet" href="style.css" />
-    <title>Myshop</title>
+    <script src="singleProduct.js" defer type="module"></script>
+    <title>single Product</title>
   </head>
   <body>
     <header class="header">
@@ -84,38 +86,29 @@
         </aside>
       </section>
     </header>
-    <main class="main">
-      <section class="search">
-        <form class="form">
-          <input type="text" class="form-search" placeholder="search" />
-        </form>
-        <h1 class="heading">Company</h1>
-        <section class="btn-group"></section>
-        <form class="form-range">
-          <input type="range" class="range" />
-        </form>
-        <p class="range-value"></p>
-      </section>
-      <section class="product-container">
-        <h1 class="products-heading">Products</h1>
-        <h2 class="loading">Loading...</h2>
-        <section class="products">
-          <!-- <article class="product">
-              <article class="product-container">
-                <img src="./banner1.jpg" alt="product" class="product-image" />
-                <article class="product-icons">
-                  <a href="products.html?id=1" class="btn btn-search"
-                    ><i class="fa-solid fa-search"></i
-                  ></a>
-                  <button class="btn btn-shopping">
-                    <i class="fa-solid fa-shopping-cart"></i>
-                  </button>
-                </article>
-              </article>
-              <h3 class="product-name">Name</h3>
-              <h4 class="product-price">price</h4>
-            </article> -->
-        </section>
+    <main class="single-product">
+      <h1 class="about-heading">
+        Home / <span class="product-title">Product</span>
+      </h1>
+      <h2 class="loading">Loading...</h2>
+
+      <section class="product-main">
+        <!-- <section class="product-info">
+          <img src="./banner1.jpg" alt="image" class="single-image" />
+          <h1 class="single-name">Name</h1>
+          <h2 class="single-title">by name</h2>
+          <p class="single-price">₹price</p>
+          <article class="colors">
+            <div class="color" style="background-color: red"></div>
+            <div class="color" style="background-color: red"></div>
+          </article>
+          <p class="single-description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus soluta beatae qui quia excepturi, nostrum recusandae
+            quae sit esse blanditiis dolorem saepe suscipit.
+          </p>
+          <button class="btn btn-single-cart">Add to cart</button>
+        </section> -->
       </section>
     </main>
   </body>

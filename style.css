@@ -431,11 +431,13 @@ a {
   display: grid;
   place-items: center;
   min-height: 40vh;
-  display: none;
 }
 
-.show-loading {
-  display: block;
+.products-heading {
+  text-align: center;
+  padding: 2rem 0;
+  text-transform: capitalize;
+  color: var(--secondary-color);
 }
 
 .loading h1 {
@@ -446,6 +448,21 @@ a {
   text-transform: capitalize;
   font-weight: bold;
 }
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.color {
+  /* background-color: #000; */
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
 /* ! end of loading */
 
 /*  start of  all-products  button*/
@@ -460,22 +477,26 @@ a {
 
 .product-image {
   max-width: 100%;
+  width: 100%;
   height: 15rem;
   object-fit: cover;
 }
 
-.featured-container {
+.featured-container,
+.products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 0.9fr));
   justify-content: center;
-  max-width: 300px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
 }
 
 .product {
   border-radius: 0.5rem;
-  box-shadow: 2px 4px 6px solid #000;
+  border: 2px solid gray;
 }
 
 .product-container {
@@ -505,6 +526,8 @@ a {
   border: none;
   margin: 0;
   padding: 0.2rem;
+  font-size: 2rem;
+  background-color: white;
 }
 
 .btn-shopping:hover,
@@ -569,15 +592,26 @@ a {
   color: blueviolet;
 }
 
+.range-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: purple;
+  margin: 1rem 1.2rem;
+}
+
+.form-range {
+  margin-left: 1.2rem;
+}
+
 .btn-group {
   display: flex;
   flex-direction: column;
   width: 150px;
-  margin: 0 auto;
   gap: 0.5rem;
   justify-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .btn-company {
@@ -598,6 +632,40 @@ a {
 .btn-company:hover {
   background-color: grey;
   color: black;
+}
+
+.product-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.9fr));
+  justify-content: center;
+}
+
+.single-image {
+  max-width: 100%;
+  width: 100%;
+  height: 15rem;
+}
+
+.single-name,
+.single-title,
+.single-price {
+  text-align: left;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.single-description {
+  text-align: left;
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+}
+
+.btn-single-cart {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 /* responsive */

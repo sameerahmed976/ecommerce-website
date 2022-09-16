@@ -10,7 +10,7 @@ export const displayProducts = (products, element) => {
             <article class="product-container">
               <img src="${image}" alt="product" class="product-image" />
               <article class="product-icons">
-                <a href="products.html?id=${id}" class="btn btn-search"
+                <a href="singleProduct.html?id=${id}" class="btn btn-search"
                   ><i class="fa-solid fa-search"></i
                 ></a>
                 <button class="btn btn-shopping" data-id="${id}"  >
