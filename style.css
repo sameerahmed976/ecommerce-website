@@ -431,6 +431,11 @@ a {
   display: grid;
   place-items: center;
   min-height: 40vh;
+  display: none;
+}
+
+.show-loading {
+  display: block;
 }
 
 .loading h1 {
@@ -455,27 +460,22 @@ a {
 
 .product-image {
   max-width: 100%;
-  width: 100%;
   height: 15rem;
   object-fit: cover;
 }
 
-.featured-container,
-.products {
+.featured-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
-  max-width: 90%;
+  max-width: 300px;
   margin: 0 auto;
   margin-bottom: 3rem;
-  row-gap: 2rem;
-  column-gap: 2rem;
 }
 
 .product {
-  border: 1px solid rgba(10, 10, 10, 0.192);
-  box-shadow: 2px 4px 6px #3a3a3a;
   border-radius: 0.5rem;
+  box-shadow: 2px 4px 6px solid #000;
 }
 
 .product-container {
@@ -484,13 +484,8 @@ a {
 
 .product-icons {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.26);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -505,7 +500,7 @@ a {
 .btn-shopping,
 .btn-search {
   background-color: transparent;
-  color: orange;
+  color: black;
   box-shadow: none;
   border: none;
   margin: 0;
@@ -515,7 +510,7 @@ a {
 .btn-shopping:hover,
 .btn-search:hover {
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: orange;
   transform: none;
 }
 
@@ -530,6 +525,80 @@ a {
 }
 
 /* ! start   featured  */
+
+/* buttons of products */
+
+.form-search {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  padding-left: 1.1rem;
+  margin: 2rem 0;
+  max-width: 200px;
+  font-size: 1.2rem;
+  border: 1px solid lightgray;
+  margin-left: 1rem;
+  transition: var(--transition-8);
+  background-color: gray;
+  border-radius: 0.5rem;
+}
+
+.form-search::placeholder {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(6, 247, 214);
+  transition: var(--transition-8);
+}
+
+.form-search:focus,
+.form-search:hover {
+  transition: var(--transition-8);
+  background-color: white;
+  outline-color: black;
+}
+
+.heading {
+  text-align: left;
+  padding: 1rem 0;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: blueviolet;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin: 0 auto;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-company {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #000;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: var(--transition-8);
+}
+
+.btn-company:hover {
+  background-color: grey;
+  color: black;
+}
 
 /* responsive */
 
