@@ -22,7 +22,7 @@ const priceRange = (data) => {
     const value = parseInt(inputValue.value);
     rangeValue.textContent = `Value ₹ ${value}`;
     let newStoreData = data.filter((ele) => ele.price * 10 <= value);
-    displayProducts(newStoreData, getElement(".products"));
+    displayProducts(newStoreData, getElement(".products"), true);
     if (newStoreData.length < 1) {
       products.innerHTML = `<h1>Sorry No Product Found</h1>`;
     }

@@ -24,7 +24,7 @@ const searchFilter = (data) => {
           return ele;
         }
       });
-      displayProducts(newStoreData, getElement(".products"));
+      displayProducts(newStoreData, getElement(".products"), true);
       if (newStoreData.length < 1) {
         products.innerHTML = `<h1>Sorry No Product Found</h1>`;
       }

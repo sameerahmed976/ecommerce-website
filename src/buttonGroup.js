@@ -25,7 +25,7 @@ const buttonGroup = (store) => {
         newStoreData = store.filter((el) => el.company === element.textContent);
       }
 
-      displayProducts(newStoreData, getElement(".products"));
+      displayProducts(newStoreData, getElement(".products"), true);
     }
   });
 };

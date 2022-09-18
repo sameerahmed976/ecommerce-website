@@ -514,7 +514,7 @@ a {
   transition: var(--transition-8);
 }
 
-.product-container:hover .product-icons {
+.product:hover .product-icons {
   opacity: 1;
 }
 

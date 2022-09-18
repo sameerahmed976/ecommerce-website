@@ -3,7 +3,7 @@ import { getElement } from "./getElement.js";
 import { formatPrice } from "./utils.js";
 const loading = getElement(".loading");
 
-export const displayProducts = (products, element) => {
+export const displayProducts = (products, element, filters) => {
   element.innerHTML = products
     .map(({ name, image, id, price }) => {
       return ` <article class="product"  data-id="${id}" >
@@ -23,6 +23,10 @@ export const displayProducts = (products, element) => {
           </article> `;
     })
     .join(" ");
+  if (filters) {
+    return;
+  }
+
   loading.style.display = "none";
 
   element.addEventListener("click", (e) => {
