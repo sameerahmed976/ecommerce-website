@@ -1,3 +1,4 @@
+import "./src/addToCart.js";
 import "./src/cartToggle.js";
 import { displayProducts } from "./src/displayProducts.js";
 import { getElement } from "./src/getElement.js";

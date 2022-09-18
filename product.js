@@ -1,3 +1,4 @@
+import "./src/addToCart.js";
 import { buttonGroup } from "./src/buttonGroup.js";
 import "./src/cartToggle.js";
 import { displayProducts } from "./src/displayProducts.js";
