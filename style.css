@@ -34,7 +34,7 @@
 body {
   font-family: var(--regular-font);
   font-size: 16px;
-  animation: slide 0.8s ease normal 1;
+  animation: slide 1s ease normal 1;
 }
 
 @keyframes slide {
@@ -43,7 +43,7 @@ body {
   }
 
   to {
-    transform: translateX(0deg);
+    transform: translateX(0%);
   }
 }
 
@@ -64,7 +64,6 @@ a {
 .header {
   position: sticky;
   top: 0;
-  padding: 1rem;
   z-index: 1;
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow-1);
@@ -74,6 +73,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.6rem 1.5rem;
 }
 
 .cart {
@@ -94,6 +94,14 @@ a {
 .nav-links {
   display: none;
 }
+
+.nav-links li a {
+  color: var(--secondary-color);
+}
+.nav-links li a:hover {
+  color: orangered;
+}
+
 .hamburger {
   width: 2.5rem;
   height: 2.5rem;
@@ -207,9 +215,9 @@ a {
 .hero-heading {
   text-transform: capitalize;
   letter-spacing: 2px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: green;
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -219,9 +227,9 @@ a {
   text-align: center;
   background-color: black;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   padding: 0.5rem 1rem;
-  margin-left: 10%;
+  margin-left: 15%;
   border-radius: 0.5rem;
   text-transform: capitalize;
   letter-spacing: 2px;
@@ -234,6 +242,10 @@ a {
 .btn:hover {
   background-color: orange;
   transform: translateY(15%);
+}
+
+.btn-shop a {
+  color: white;
 }
 
 /* cart overlay */
@@ -265,6 +277,11 @@ a {
 
 .cart-header {
   position: relative;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .main-cart {
@@ -365,18 +382,23 @@ a {
 
 /* start of about page */
 .about-heading {
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
   font-size: 1.5rem;
-  text-align: center;
-  color: rgb(233, 116, 233);
+  text-align: start;
+  margin-left: 1rem;
+  color: var(--secondary-color);
   font-weight: bold;
+  background-color: rgb(255, 255, 255);
 }
 .about-title {
-  padding: 1rem;
+  padding: 0.5rem;
   text-transform: capitalize;
   letter-spacing: 2px;
   font-weight: bold;
-  color: rgb(8, 248, 8);
+  color: var(--secondary-color);
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 
 .about-paragraph {
@@ -408,9 +430,22 @@ a {
 
 .featured-heading {
   text-align: center;
-  padding: 2rem 0;
   text-transform: capitalize;
   color: var(--secondary-color);
+  margin-top: 1rem;
+  background-color: white;
+}
+
+.underline {
+  height: 0.5rem;
+  width: 8rem;
+  background-color: var(--secondary-color);
+  margin: 0 auto;
+  opacity: 0.3;
+}
+
+.product-container .underline {
+  width: 8rem;
 }
 
 .loading {
@@ -421,9 +456,9 @@ a {
 
 .products-heading {
   text-align: center;
-  padding: 2rem 0;
   text-transform: capitalize;
   color: var(--secondary-color);
+  margin-top: 1rem;
 }
 
 .loading h1 {
@@ -456,7 +491,9 @@ a {
   display: block;
   margin: 0 auto;
   margin-bottom: 2rem;
-  width: 200px;
+  width: 160px;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 /*  end of  all-products  button*/
@@ -475,14 +512,21 @@ a {
   justify-content: center;
   width: 90%;
   margin: 0 auto;
+  margin-top: 2rem;
   margin-bottom: 3rem;
   row-gap: 2rem;
   column-gap: 2rem;
 }
 
 .product {
-  border-radius: 0.5rem;
-  border: 2px solid gray;
+  box-shadow: 1px 1px 4px var(--secondary-color);
+  transition: all 0.1s ease-in-out;
+}
+
+.product:hover {
+  box-shadow: 2px 2px 4px var(--secondary-color);
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.02);
 }
 
 .product-container {
@@ -537,6 +581,15 @@ a {
 
 /* buttons of products */
 
+.search {
+  margin-left: 1rem;
+}
+
+.search .underline {
+  margin-left: 1rem;
+  width: 7rem;
+}
+
 .form-search {
   display: block;
   width: 100%;
@@ -548,7 +601,7 @@ a {
   border: 1px solid lightgray;
   margin-left: 1rem;
   transition: var(--transition-8);
-  background-color: gray;
+  background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
 }
 
@@ -556,7 +609,7 @@ a {
   text-transform: capitalize;
   letter-spacing: 1px;
   font-weight: bold;
-  color: rgb(6, 247, 214);
+  color: var(--secondary-color);
   transition: var(--transition-8);
 }
 
@@ -569,20 +622,24 @@ a {
 
 .heading {
   text-align: left;
-  padding: 1rem 0;
   margin-left: 1rem;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1.4rem;
-  letter-spacing: 1px;
-  color: blueviolet;
+  letter-spacing: 2px;
+  color: var(--secondary-color);
 }
 
 .range-value {
   font-size: 1.2rem;
   font-weight: bold;
-  color: purple;
+  color: var(--secondary-color);
   margin: 1rem 1.2rem;
+}
+
+.filter-value {
+  color: #000;
+  padding-left: 1rem;
 }
 
 .form-range {
@@ -592,30 +649,31 @@ a {
 .btn-group {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 120px;
   gap: 0.5rem;
   justify-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 1rem;
+  background-color: whitesmoke;
 }
 
 .btn-company {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   border: none;
   background-color: #000;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   text-transform: capitalize;
   letter-spacing: 1px;
   text-align: center;
-  border-radius: 2rem;
   cursor: pointer;
   transition: var(--transition-8);
 }
 
 .btn-company:hover {
+  transform: translateY(5%);
   background-color: grey;
   color: black;
 }
@@ -657,6 +715,10 @@ a {
 /* responsive */
 
 @media (min-width: 768px) {
+  .filter-value {
+    padding-left: 0.2rem;
+  }
+
   .nav-links {
     display: flex;
     gap: 1rem;
@@ -665,13 +727,13 @@ a {
 
   .nav-links li a {
     letter-spacing: 2px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.3rem;
     transition: var(--transition-8);
   }
 
   .nav-links li a:hover {
-    color: black;
+    color: orangered;
   }
 
   .hamburger {
@@ -684,6 +746,10 @@ a {
   .logo {
     margin-right: 14.4rem;
   }
+
+  .main {
+    grid-template-columns: 0.4fr 1fr;
+  }
 }
 
 @media (min-width: 992px) {
@@ -693,9 +759,18 @@ a {
   .nav-links {
     gap: 1rem;
   }
+  .main {
+    grid-template-columns: 0.3fr 1fr;
+  }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .header {
     padding: 1rem 5rem;
+  }
+  .main {
+    grid-template-columns: 0.2fr 1fr;
+  }
+  .featured-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 0.9fr));
   }
 }

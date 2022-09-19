@@ -15,12 +15,13 @@ const priceRange = (data) => {
   //   maxPrice = Math.ceil(maxPrice);
   inputValue.max = maxPrice;
   inputValue.min = 0;
-  rangeValue.textContent = `Value ₹ ${maxPrice}`;
+  rangeValue.innerHTML = `Value :  <span class="filter-value" >₹ ${maxPrice}</span>`;
+  // rangeValue.textContent = `Value  :   ₹ ${maxPrice}`;
   inputValue.value = maxPrice;
 
   inputValue.addEventListener("input", () => {
     const value = parseInt(inputValue.value);
-    rangeValue.textContent = `Value ₹ ${value}`;
+    rangeValue.innerHTML = `Value :  <span class="filter-value" >₹ ${value}</span>`;
     let newStoreData = data.filter((ele) => ele.price * 10 <= value);
     displayProducts(newStoreData, getElement(".products"), true);
     if (newStoreData.length < 1) {
